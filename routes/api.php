@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('/create/atividade', [App\Http\Controllers\AtividadesController::class, 'create'])->name('create');
+Route::get('/list/atividade', [App\Http\Controllers\AtividadesController::class, 'list'])->name('list');
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
